@@ -13,6 +13,16 @@ RSS news aggregator with colored terminal output
 - Python 3.8+
 - Dependencies: `feedparser`, `colorama`, `beautifulsoup4`
 
+## Script with RSS feed URLs
+```
+python doomy.py --urls "https://rss.example.com/feed1" "https://rss.example.com/feed2"
+```
+
+## Script with a file with RSS feed URLs
+```
+python doomy.py --file feeds.txt
+```
+
 ## Structure of feeds.txt
 ```
 https://habr.com/ru/rss/articles/
