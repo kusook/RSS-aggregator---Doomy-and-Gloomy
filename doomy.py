@@ -3,7 +3,6 @@ import argparse
 from datetime import datetime
 from colorama import Fore, Style, init
 
-# Инициализация colorama для Windows
 init(autoreset=True)
 
 COLORS = {
@@ -15,7 +14,6 @@ COLORS = {
 }
 
 def parse_feed(url):
-    """Парсинг RSS-ленты и возврат структурированных данных"""
     entries = []
     feed = feedparser.parse(url)
     
