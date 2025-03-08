@@ -24,5 +24,5 @@ https://www.kp.ru/rss/allsections.xml
 ```bash
 git clone https://github.com/kusook/RSS-aggregator---Doomy-and-Gloomy.git
 cd RSS-aggregator---Doomy-and-Gloomy
-pip install -r requirements.txt
+pip install feedparser colorama beautifulsoup4
 ```
