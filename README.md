@@ -13,8 +13,16 @@ RSS news aggregator with colored terminal output
 - Python 3.8+
 - Dependencies: `feedparser`, `colorama`, `beautifulsoup4`
 
+## Structure of feeds.txt
+```
+https://habr.com/ru/rss/articles/
+https://thefederalist.com/feed/
+https://www.kp.ru/rss/allsections.xml
+```
+
 ## Installation
 ```bash
 git clone https://github.com/kusook/RSS-aggregator---Doomy-and-Gloomy.git
 cd RSS-aggregator---Doomy-and-Gloomy
 pip install -r requirements.txt
+```
