@@ -15,6 +15,6 @@ RSS news aggregator with colored terminal output
 
 ## Installation
 ```bash
-git clone https://github.com/ваш-username/rss-aggregator.git
-cd rss-aggregator
+git clone https://github.com/kusook/RSS-aggregator---Doomy-and-Gloomy.git
+cd RSS-aggregator---Doomy-and-Gloomy
 pip install -r requirements.txt
