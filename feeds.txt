@@ -1,3 +1,5 @@
 https://habr.com/ru/rss/articles/
 https://thefederalist.com/feed/
 https://www.kp.ru/rss/allsections.xml
+https://www.pcgamer.com/uk/feeds.xml
+https://knife.media/feed/
