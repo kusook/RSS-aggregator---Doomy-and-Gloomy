@@ -8,21 +8,26 @@ RSS news aggregator with colored terminal output
 - Colored terminal output
 - HTML tag filtering in description
 - Sorting by publication date
+- Possibility to set a limit on the news displayed
 
 ## Requirements
 - Python 3.8+
 - Dependencies: `feedparser`, `colorama`, `beautifulsoup4`
 
 ## Script with RSS feed URLs
-```
+```bash
 python doomy.py --urls "https://rss.example.com/feed1" "https://rss.example.com/feed2"
 ```
 
 ## Script with a file with RSS feed URLs
-```
+```bash
 python doomy.py --file feeds.txt
 ```
 
+## Setting a limit
+```
+python doomy.py --limit 2 --file feeds.txt
+```
 ## Structure of feeds.txt
 ```
 https://habr.com/ru/rss/articles/
