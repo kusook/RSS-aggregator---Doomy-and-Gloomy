@@ -25,9 +25,15 @@ python doomy.py --file feeds.txt
 ```
 
 ## Setting a limit
-```
+```bash
 python doomy.py --limit 2 --file feeds.txt
 ```
+
+## Setting a keyword
+```bash
+python doomy.py --include "word" --limit 2 --file feeds.txt
+```
+
 ## Structure of feeds.txt
 ```
 https://habr.com/ru/rss/articles/
@@ -39,5 +45,5 @@ https://www.kp.ru/rss/allsections.xml
 ```bash
 git clone https://github.com/kusook/RSS-aggregator---Doomy-and-Gloomy.git
 cd RSS-aggregator---Doomy-and-Gloomy
-pip install feedparser colorama beautifulsoup4
+pip install feedparser colorama
 ```
