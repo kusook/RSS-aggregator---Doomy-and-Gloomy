@@ -68,7 +68,7 @@ def main():
     all_entries.sort(key=lambda x: x['dt'], reverse=True)
     
     if args.include:
-        all_entries = [e for e in all_entries if args.include in str(e['title']).lower()]
+        all_entries = [e for e in all_entries if args.include.lower() in str(e['title']).lower()]
     
     if args.limit:
         all_entries = all_entries[:args.limit]
