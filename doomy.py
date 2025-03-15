@@ -43,6 +43,7 @@ def main():
     parser = argparse.ArgumentParser(description='RSS Aggregator')
     parser.add_argument('-u', '--urls', nargs='+', help='Список URL RSS-лент')
     parser.add_argument('-f', '--file', help='Файл со списком RSS-лент')
+    parser.add_argument('-i', '--include', type=str, help='Фильтр по ключевому слову')
     parser.add_argument('-l', '--limit', type=int, help='Лимит записей на вывод')
     
     args = parser.parse_args()
@@ -66,16 +67,24 @@ def main():
     
     all_entries.sort(key=lambda x: x['dt'], reverse=True)
     
+    if args.include:
+        all_entries = [e for e in all_entries if args.include in str(e['title']).lower()]
+    
     if args.limit:
         all_entries = all_entries[:args.limit]
-    
+        
+    if not all_entries:
+        if args.include:
+            print(f"\n{Fore.RED}Новости, содержащие '{args.include}', не найдены")
+        else:
+            print("Новости не найдены")
+        
     for idx, entry in enumerate(all_entries, 1):
         print(f"\n{Fore.LIGHTWHITE_EX}{idx}. ", end='')
         print(f"{COLORS['source']}[{entry['source']}]", end=' ')
         print(f"{COLORS['title']}{entry['title']}")
         print(f"{COLORS['date']}Опубликовано: {entry['published']}")
         print(f"{COLORS['link']}Ссылка: {entry['link']}")
-        print(f"{Fore.LIGHTBLACK_EX}{'-' * 80}")
-
+        print(f"{Fore.LIGHTBLACK_EX}{'-' * 80}")             
 if __name__ == "__main__":
     main()
