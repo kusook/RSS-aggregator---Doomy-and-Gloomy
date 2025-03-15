@@ -40,15 +40,16 @@ def parse_feed(url):
     return entries
 
 def main():
-    parser = argparse.ArgumentParser(description='RSS Aggregator')
+    parser = argparse.ArgumentParser(description="Doomy and Gloomy")
     parser.add_argument('-u', '--urls', nargs='+', help='Список URL RSS-лент')
     parser.add_argument('-f', '--file', help='Файл со списком RSS-лент')
     parser.add_argument('-i', '--include', type=str, help='Фильтр по ключевому слову')
     parser.add_argument('-l', '--limit', type=int, help='Лимит записей на вывод')
     
+    print(f"{Fore.RED}·▄▄▄▄              • ▌ ▄ ·.  ▄· ▄▌     ▄▄▄·  ▐ ▄ ·▄▄▄▄       ▄▄ • ▄▄▌              • ▌ ▄ ·.  ▄· ▄▌\n██▪ ██ ▪     ▪     ·██ ▐███▪▐█▪██▌    ▐█ ▀█ •█▌▐███▪ ██     ▐█ ▀ ▪██•  ▪     ▪     ·██ ▐███▪▐█▪██▌\n▐█· ▐█▌ ▄█▀▄  ▄█▀▄ ▐█ ▌▐▌▐█·▐█▌▐█▪    ▄█▀▀█ ▐█▐▐▌▐█· ▐█▌    ▄█ ▀█▄██▪   ▄█▀▄  ▄█▀▄ ▐█ ▌▐▌▐█·▐█▌▐█▪\n██. ██ ▐█▌.▐▌▐█▌.▐▌██ ██▌▐█▌ ▐█▀·.    ▐█ ▪▐▌██▐█▌██. ██     ▐█▄▪▐█▐█▌▐▌▐█▌.▐▌▐█▌.▐▌██ ██▌▐█▌ ▐█▀·.\n▀▀▀▀▀•  ▀█▄▀▪ ▀█▄▀▪▀▀  █▪▀▀▀  ▀ •      ▀  ▀ ▀▀ █▪▀▀▀▀▀•     ·▀▀▀▀ .▀▀▀  ▀█▄▀▪ ▀█▄▀▪▀▀  █▪▀▀▀  ▀ • ")
+    
     args = parser.parse_args()
     urls = []
-    
     if args.file:
         with open(args.file, 'r') as f:
             urls = [line.strip() for line in f if line.strip()]
